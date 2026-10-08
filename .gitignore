@@ -1,0 +1,6 @@
+bin/
+obj/
+dist/
+kurulum/
+*.user
+.vs/

@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ClaudeAutopilot</AssemblyName>
+    <RootNamespace>AutopilotApp</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Product>Claude Autopilot</Product>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- DPI ayarı WPF için manifest'te; WinForms sadece tepsi simgesi için kullanılıyor. -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+    <!-- Yayın ve kurulum çıktıları projenin parçası değil. -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);dist\**;kurulum\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WPF ile WinForms aynı isimde tipler içerir; WinForms sadece tepsi simgesi için, tam adla kullanılıyor. -->
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="web\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Resource Include="Assets\app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4258.31" />
+  </ItemGroup>
+
+</Project>

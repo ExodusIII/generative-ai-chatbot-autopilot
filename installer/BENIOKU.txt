@@ -1,0 +1,32 @@
+CLAUDE AUTOPILOT — KURULUM
+==========================
+
+1) Zip'i bir klasöre çıkar (sağ tık > Tümünü ayıkla). Zip'in içinden doğrudan çalıştırma.
+
+2) Kur.cmd dosyasına çift tıkla.
+   - Eksik araçları sorar ve kurar: PowerShell 7, Git, WebView2, Claude Code.
+     Kurulurken Windows izin isteyebilir, "Evet" de.
+   - Uygulamayı %LOCALAPPDATA%\Programs\ClaudeAutopilot klasörüne kurar.
+   - 'ap' komutunu ekler, Başlat menüsüne kısayol koyar.
+   - Yönetici yetkisi gerekmez.
+   - Windows "bilinmeyen yayımcı" uyarısı verirse: "Ek bilgi" > "Yine de çalıştır".
+
+3) Uygulama açılınca:
+   a. Ayarlar > Claude girişi > "Terminali aç". Tarayıcıda Claude hesabınla giriş yap.
+      Terminalde çıkan token'ı kopyala, uygulamaya yapıştır, Kaydet.
+   b. Proje klasörünü seç (TASKS.md olan ya da olacak klasör).
+   c. İlk görevini ekle ve motoru başlat.
+
+GÜNCELLEME
+   Yeni paketteki Kur.cmd'yi çalıştırman yeterli. Ayarların ve projelerin korunur.
+
+KALDIRMA
+   Windows Ayarlar > Uygulamalar > Claude Autopilot > Kaldır
+   (ya da %LOCALAPPDATA%\Programs\ClaudeAutopilot\Kaldir.cmd)
+   Proje klasörlerine dokunulmaz.
+
+BİLMEN GEREKENLER
+   - Kullanım limiti Claude hesabına bağlıdır. İki bilgisayarda aynı anda
+     çalıştırırsan limit iki kat hızlı dolar.
+   - Görevlerine diğer bilgisayardan devam etmek istersen proje klasörünü
+     (TASKS.md ve sonuclar\) bu bilgisayara kopyala ve uygulamada onu seç.
